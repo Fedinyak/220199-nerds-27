@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Андрей Фединяк](https://up.htmlacademy.ru/htmlcss/27/user/220199).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Корейкин](https://htmlacademy.ru/profile/ankormoreankor).
 
 ---
 

@@ -70,11 +70,58 @@
           <fieldset>
             <legend>Особенности:</legend>
             <ul>
-              <li>Слайдер</li>
-              <li>Блок преимуществ</li>
-              <li>Новости</li>
-              <li>Галерея</li>
-              <li>Корзина</li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="features-filter-slide"
+                    value="slide"
+                    id="filter-stretch"
+                    checked
+                  />Слайдер</label
+                >
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="features-filter-profit"
+                    value="profit"
+                    id="filter-profit"
+                  />Блок преимуществ</label
+                >
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="features-filter-news"
+                    value="news"
+                    id="filter-news"
+                    checked
+                  />Новости</label
+                >
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="features-filter-gallery"
+                    value="gallery"
+                    id="filter-gallery"
+                  />Галерея</label
+                >
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="features-filter-bag"
+                    value="bag"
+                    id="filter-bag"
+                  />Корзина</label
+                >
+              </li>
             </ul>
           </fieldset>
           <button>Показать</button>
@@ -171,6 +218,19 @@
           </li>
         </ul>
       </section>
+      <section>
+        <img
+          src="img/map.jpg"
+          width="1440"
+          height="416"
+          alt="Адрес студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
+        />
+        <h2 class="visually-hidden">Контакты студии</h2>
+        <p>Nёrds design studio</p>
+        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <p>тел. +7 (812) 275-75-75</p>
+        <button type="button">Напишите нам</button>
+      </section>
     </main>
 
     <footer>
@@ -182,5 +242,34 @@
       <p>Давайте дружить, это выгодно!</p>
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
+    <section>
+      <h2>Напишите нам</h2>
+      <form>
+        <p><label for="appointment-name">Ваше имя:</label></p>
+        <input
+          type="text"
+          name="name"
+          placeholder="Имя Фамилия"
+          id="appointment-name"
+        />
+        <p><label for="appointment-email">Ваш e-mail:</label></p>
+        <input
+          type="email"
+          name="email"
+          placeholder="email@example.com"
+          id="appointment-email"
+        />
+        <p><label for="appointment-mail-text">Текст письма:</label></p>
+        <textarea
+          type="text"
+          name="mail-text"
+          placeholder="В свободной форме"
+          id="appointment-mail-text"
+          rows="4"
+        ></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>

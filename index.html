@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Нёрдс</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
           <img
             src="img/nerds-logo.svg"
             width="160"
@@ -16,70 +22,76 @@
             alt="Логотип дизайн студии «Nëerd's"
           />
         </a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <a href="bag.html">Корзина</a>
+        <a class="user-navigation" href="bag.html">Корзина</a>
       </nav>
     </header>
 
     <main>
-      <section>
-        <ul>
-          <li>
+      <section class="products">
+        <h1 class="visually-hidden">Дизайн-студия «Nëerd's»</h1>
+        <ul class="products-list">
+          <li class="products-item">
             <img
               src="img/advantage-picture-red.png"
               width="300"
               height="146"
-              alt="Ноутбук"
             />
-            <h2>Веб-сайты</h2>
-            <p>Мир никогда не будет прежним после того как увидит ваш сайт</p>
-            <a href="order-site.html">Заказать</a>
+            <h2 class="products-item-title">Веб-сайты</h2>
+            <p class="products-item-text">
+              Мир никогда не будет прежним после того как увидит ваш сайт
+            </p>
+            <a class="button" href="order-site.html">Заказать</a>
           </li>
-          <li>
+          <li class="products-item">
             <img
               src="img/advantage-picture-green.png"
               width="300"
               height="146"
-              alt="Смартфон"
             />
-            <h2>Приложения</h2>
-            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-            <a href="order-app.html">Заказать</a>
+            <h2 class="products-item-title">Приложения</h2>
+            <p class="products-item-text">
+              Покорите топ-10 приложений в AppStore и Google Play
+            </p>
+            <a class="button button-app" href="order-app.html">Заказать</a>
           </li>
-          <li>
+          <li class="products-item">
             <img
               src="img/advantage-picture-yellow.png"
               width="300"
               height="146"
-              alt="Презентация"
             />
-            <h2>Презентации</h2>
-            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a href="order-presentation.html">Заказать</a>
+            <h2 class="products-item-title">Презентации</h2>
+            <p class="products-item-text">
+              Вы даже не подозреваете, насколько вы изумительны!
+            </p>
+            <a class="button button-presentation" href="order-presentation.html"
+              >Заказать</a
+            >
           </li>
         </ul>
       </section>
 
-      <section>
+      <section class="benefits">
         <h2 class="visually-hidden">Преимущества студии</h2>
-        <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+        <p class="benefits-lead">Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</span></p>
         <p>
           Исповедуем принципы минимализма и чистоты. Ставим математический
           расчет превыше креатива. Работаем не покладая рук, как роботы.
         </p>
-        <p>заказы на разработку:</p>
-        <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
+        <p class="benefits-list-title">Выполняем заказы на разработку:</p>
+        <ul class="benefits-list">
+          <li class="benefits-item">Мобильных приложений для iOS и Android</li>
+          <li class="benefits-item">Слайдшоу и видео для корпоративных презентаций</li>
+          <li class="benefits-item">Веб-сайтов любой сложности</li>
         </ul>
-        <p>C 2004 года любим точность во всем:</p>
-        <dl>
+        <p class="benefits-subject">C 2004 года любим точность во всем:</p>
+        <dl class="benefits-desk">
           <dd>146<sup>%</sup></dd>
           <dt>Уровень самоотдачи</dt>
           <dd>100<sup>%</sup></dd>
@@ -132,7 +144,7 @@
         </ul>
       </section>
 
-      <section>
+      <section class="contacts">
         <img
           src="img/map.jpg"
           width="1440"
@@ -140,27 +152,33 @@
           alt="Адрес студии 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
         />
         <h2 class="visually-hidden">Контакты студии</h2>
-        <p>Nёrds design studio</p>
+        <p class="contacts-title">Nёrds design studio</p>
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p>тел. +7 (812) 275-75-75</p>
-        <button type="button">Напишите нам</button>
+        <button class="button" type="button">Напишите нам</button>
       </section>
     </main>
 
-    <footer>
-      <ul>
-        <li><a>Вконтакте</a></li>
-        <li><a>Фейсбук</a></li>
-        <li><a>Инстаграм</a></li>
+    <footer class="main-footer">
+      <ul class="footer-social">
+        <li class="social-button"><a>Вконтакте</a></li>
+        <li class="social-button"><a>Фейсбук</a></li>
+        <li class="social-button"><a>Инстаграм</a></li>
       </ul>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="call-to-action">
+        <p class="call-to-text">Давайте дружить, это выгодно!</p>
+        <p class="call-to-discount">
+          Скидка 10% для друзей из социальных сетей.
+        </p>
+      </div>
     </footer>
-    <section>
+
+    <section class="modal">
       <h2>Напишите нам</h2>
-      <form>
+      <form class="appointment-form">
         <p><label for="appointment-name">Ваше имя:</label></p>
         <input
+          class="name-form"
           type="text"
           name="name"
           placeholder="Имя Фамилия"
@@ -168,6 +186,7 @@
         />
         <p><label for="appointment-email">Ваш e-mail:</label></p>
         <input
+          class="mail-form"
           type="email"
           name="email"
           placeholder="email@example.com"
@@ -175,15 +194,16 @@
         />
         <p><label for="appointment-mail-text">Текст письма:</label></p>
         <textarea
+          class="text-form"
           type="text"
           name="mail-text"
           placeholder="В свободной форме"
           id="appointment-mail-text"
           rows="4"
         ></textarea>
-        <button type="submit">Отправить</button>
+        <button class="button" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>

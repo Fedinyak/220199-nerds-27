@@ -205,7 +205,9 @@ a {
 }
 
 .filter-input:hover + label,
-.filter-input:focus + label {
+.filter-input:focus + label,
+.filter-input:not(:disabled):hover + label,
+.filter-input:not(:disabled):focus + label {
   color: #283136;
 }
 

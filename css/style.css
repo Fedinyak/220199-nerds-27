@@ -26,6 +26,12 @@ a {
   text-decoration: none;
 }
 
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .button {
   height: 50px;
   font: inherit;
@@ -102,13 +108,23 @@ a {
   color: #ffffff;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .main-header {
   background-color: #eeeeee;
   font-weight: 500;
 }
 
-.list {
-  list-style: none;
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 49px;
+  padding-bottom: 18px;
 }
 
 .main-navigation a {
@@ -127,12 +143,41 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.site-navigation {
+  display: flex;
+}
+
+.site-navigation li {
+  margin-right: 45px;
+}
+
+.products-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.products-item {
+  width: 300px;
+}
+
 .products-item-title {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.benefits-text-column {
+  width: 650px;
 }
 
 .benefits-lead {
@@ -150,22 +195,44 @@ a {
   line-height: 48px;
 }
 
+.benefits-subject-column {
+  width: 360px;
+}
+
 .benefits-subject {
   color: #000000;
   font-weight: 700;
-
+  text-align: center;
   text-transform: uppercase;
+  margin-bottom: 49px;
+}
+
+.benefits-desk {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
 }
 
 .benefits-desk dd {
   color: #000000;
   font-size: 45px;
   font-weight: 700;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 27px;
 }
 
 .benefits-desk dt {
   font-size: 16px;
   line-height: 18px;
+}
+
+.partners-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-top: 46px;
+  margin-bottom: 44px;
 }
 
 .contacts {
@@ -179,13 +246,24 @@ a {
   text-transform: uppercase;
 }
 
+.catalog-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-title {
+  margin-top: 0;
+  padding-bottom: 116px;
   font-size: 55px;
-  line-height: 55px;
+  padding-top: 30px;
+  line-height: 75px;
   color: #000000;
   font-weight: 500;
   text-align: center;
   background-color: #eeeeee;
+}
+.filters {
+  width: 260px;
 }
 
 .filters fieldset {
@@ -204,8 +282,6 @@ a {
   text-transform: uppercase;
 }
 
-.filter-input:hover + label,
-.filter-input:focus + label,
 .filter-input:not(:disabled):hover + label,
 .filter-input:not(:disabled):focus + label {
   color: #283136;
@@ -213,6 +289,22 @@ a {
 
 .filter-input:disabled + label {
   color: rgba(40, 49, 54, 0.3);
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 790px;
+}
+
+.catalog-item {
+  width: 360px;
+  margin-right: 40px;
+  margin-bottom: 33px;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .catalog-item-container {
@@ -243,10 +335,23 @@ a {
   color: #666666;
 }
 
+.main-footer-wrap {
+  display: flex;
+  margin-top: 69px;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  width: 270px;
+  margin-right: 139px;
+}
+
 .call-to-text {
   font-size: 36px;
   font-weight: 700;
   color: #000000;
+  margin: 0;
 }
 
 .modal {

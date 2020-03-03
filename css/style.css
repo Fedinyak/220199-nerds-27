@@ -127,6 +127,25 @@ a {
   padding-bottom: 18px;
 }
 
+.user-navigation {
+  position: relative;
+}
+
+.user-navigation::before {
+  content: "";
+  position: absolute;
+
+  top: 5px;
+  left: -36px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .main-navigation a {
   line-height: 30px;
   text-transform: uppercase;

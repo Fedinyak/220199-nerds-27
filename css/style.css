@@ -36,7 +36,7 @@ a {
   display: inline-block;
   font: inherit;
 
-  padding: 18px 40px;
+  padding: 17px 40px;
   line-height: 16px;
 
   text-align: center;
@@ -274,11 +274,12 @@ a {
 
 .benefits-subject-column {
   width: 360px;
+  margin-bottom: 14px;
 }
 
 .benefits-subject {
   margin-top: 39px;
-  margin-bottom: 49px;
+  margin-bottom: 53px;
 
   color: #000000;
   font-weight: 700;
@@ -304,7 +305,14 @@ a {
 .benefits-desk {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+}
+
+.benefits-desk-wrap {
+  margin-right: 21px;
+}
+
+.benefits-desk-wrap sup {
+  font-size: 28px;
 }
 
 .benefits-desk dd {
@@ -313,7 +321,7 @@ a {
   font-weight: 700;
   text-align: left;
   margin-left: 0;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 }
 
 .benefits-desk dt {
@@ -323,10 +331,57 @@ a {
 
 .partners-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  flex-wrap: wrap;
   flex-grow: 1;
+
   margin-top: 46px;
   margin-bottom: 44px;
+
+  padding-top: 46px;
+  padding-bottom: 38px;
+
+  border-top: 2px solid #efefef;
+  border-bottom: 2px solid #efefef;
+}
+
+.partners-wrap li {
+  flex-basis: 160px;
+
+  text-align: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  vertical-align: middle;
+}
+
+/*
+.partners-wrap li:not(:last-child) {
+  top: auto;
+  bottom: auto;
+  height: 40px;
+  border-right: 2px solid #efefef;
+}
+*/
+.partners-wrap li:not(:last-child)::after {
+  content: "";
+  vertical-align: middle;
+  top: 63px;
+  position: absolute;
+
+  height: 52px;
+  width: 2px;
+  background-color: #efefef;
+}
+
+.partners-wrap img {
+  opacity: 0.2;
+}
+
+.partners-wrap img:hover {
+  opacity: 1;
 }
 
 .contacts {

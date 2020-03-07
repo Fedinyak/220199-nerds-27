@@ -186,6 +186,90 @@ a {
   background-position: 0 0;
 }
 
+.slider {
+  position: relative;
+  background-color: #eeeeee;
+}
+
+.slider-list {
+  width: 545px;
+}
+
+.slide {
+  display: none;
+}
+
+.slider-title {
+  padding-top: 57px;
+  padding-bottom: 12px;
+  font-size: 55px;
+  line-height: 55px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 500;
+  color: #000000;
+}
+
+.button-slider {
+  margin-top: 24px;
+  margin-bottom: 80px;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 17px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .slider-wrapper {
+  background-image: url("../img/slide-iphone.png");
+  background-repeat: no-repeat;
+  background-position: 600px 0;
+}
+
+#product-2:checked ~ .slider-wrapper {
+  background-image: url("../img/slide-mac.png");
+  background-repeat: no-repeat;
+  background-position: 600px 0;
+}
+
+#product-3:checked ~ .slider-wrapper {
+  background-image: url("../img/slide-ipad.png");
+  background-repeat: no-repeat;
+  background-position: 600px 0;
+}
+
+#product-1:checked ~ .slider-wrapper #slide1,
+#product-2:checked ~ .slider-wrapper #slide2,
+#product-3:checked ~ .slider-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .slider-wrapper label[for="product-1"],
+#product-2:checked ~ .slider-wrapper label[for="product-2"],
+#product-3:checked ~ .slider-wrapper label[for="product-3"] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 5px #ffffff, inset 0 0 0 7px #c1c1c1;
+}
+
 .products-list {
   display: flex;
   flex-wrap: wrap;
@@ -480,20 +564,147 @@ a {
   line-height: 18px;
 }
 
+.contacts {
+  margin-top: 16px;
+  position: relative;
+}
+
+.contacts-wrap {
+  position: relative;
+  box-sizing: border-box;
+  width: 319px;
+  height: 308px;
+  background-color: #ffffff;
+  top: 74px;
+  left: 0;
+  z-index: 1;
+
+  padding-left: 50px;
+  padding-top: 36px;
+  padding-right: 49px;
+}
+
+.contacts-wrap::after {
+  content: "";
+  position: absolute;
+
+  top: 35px;
+  left: 680px;
+
+  width: 231px;
+  height: 190px;
+
+  background-image: url("../img/map-marker.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.contacts-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 29px;
+}
+
 .contacts a {
   color: #666666;
+  line-height: 22px;
+}
+
+.button-contacts {
+  margin-top: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.contacts-map {
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .main-footer-wrap {
   display: flex;
-  margin-top: 69px;
+  margin-top: 185px;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .footer-social {
   display: flex;
-  width: 270px;
-  margin-right: 139px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 79px;
+  height: 79px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+
+  margin-right: 12px;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #e74246;
+}
+
+.social-button:active {
+  background-color: #d7373b;
+}
+
+.social-button:active path {
+  opacity: 0.3;
+}
+
+/* 
+
+На всякий случай оставил удалю когда узнаю как правильно.
+
+.social-button-vk::after {
+  content: "";
+  width: 26px;
+  height: 15px;
+
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social-button-fb::after {
+  content: "";
+  width: 12px;
+  height: 22px;
+
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social-button-instagram::after {
+  content: "";
+  width: 21px;
+  height: 21px;
+
+  background-image: url("../img/insta-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social-button-vk::after:active,
+.social-button-fb::after:active,
+.social-button-instagram::after:active {
+  opacity: 0.3;
+}
+
+*/
+
+.call-to-action {
+  display: block;
+  margin-left: 127px;
+  padding-top: 14px;
 }
 
 .call-to-text {
@@ -501,6 +712,12 @@ a {
   font-weight: 700;
   color: #000000;
   margin: 0;
+  line-height: 0;
+  padding-top: 20px;
+}
+
+.call-to-discount {
+  padding-top: 13px;
 }
 
 .modal {

@@ -55,12 +55,14 @@
         name="toggle"
       />
       <div class="slider-wrapper">
-        <div class="container">
+        <div class="slider-controls-wrapper">
           <div class="slider-controls">
             <label for="product-1"><p class="visually-hidden">Первый</p></label>
             <label for="product-2"><p class="visually-hidden">Второй</p></label>
             <label for="product-3"><p class="visually-hidden">Третий</p></label>
           </div>
+        </div>
+        <div class="container">
           <ul class="list slider-list">
             <li class="slider-item slide" id="slide1">
               <h3 class="slider-title">
@@ -311,37 +313,50 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <h2>Напишите нам</h2>
-      <form class="appointment-form">
-        <p><label for="appointment-name">Ваше имя:</label></p>
-        <input
-          class="name-form"
-          type="text"
-          name="name"
-          placeholder="Имя Фамилия"
-          id="appointment-name"
-        />
-        <p><label for="appointment-email">Ваш e-mail:</label></p>
-        <input
-          class="mail-form"
-          type="email"
-          name="email"
-          placeholder="email@example.com"
-          id="appointment-email"
-        />
-        <p><label for="appointment-mail-text">Текст письма:</label></p>
-        <textarea
-          class="text-form"
-          type="text"
-          name="mail-text"
-          placeholder="В свободной форме"
-          id="appointment-mail-text"
-          rows="4"
-        ></textarea>
-        <button class="button" type="submit">Отправить</button>
-      </form>
-      <button class="modal-close" type="button">Закрыть</button>
+    <section class="modal-wrap">
+      <div class="modal">
+        <h2>Напишите нам</h2>
+        <form class="appointment-form">
+          <p class="appointment-item">
+            <label for="appointment-name">Ваше имя:</label>
+            <input
+              class="name-form"
+              type="text"
+              name="name"
+              placeholder="Имя Фамилия"
+              id="appointment-name"
+            />
+          </p>
+
+          <p class="appointment-item">
+            <label for="appointment-email">Ваш e-mail:</label>
+            <input
+              class="mail-form"
+              type="email"
+              name="email"
+              placeholder="email@example.com"
+              id="appointment-email"
+            />
+          </p>
+          <p class="appointment-item appointment-item-text">
+            <label for="appointment-mail-text">Текст письма:</label>
+            <textarea
+              class="text-form"
+              type="text"
+              name="mail-text"
+              placeholder="В свободной форме"
+              id="appointment-mail-text"
+              rows="4"
+            ></textarea>
+          </p>
+          <button class="button button-appointment" type="submit">
+            Отправить
+          </button>
+        </form>
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
     </section>
   </body>
 </html>

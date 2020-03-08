@@ -93,9 +93,10 @@ a {
   color: #000000;
   font-weight: 500;
   margin-top: 4px;
-  margin-left: 14px;
+  margin-left: 0;
   width: 260px;
   background-color: #eeeeee;
+  cursor: pointer;
 }
 
 .button-filter:focus,
@@ -139,6 +140,14 @@ a {
 
 .main-header-logo img {
   display: block;
+}
+
+.main-header-logo img:hover {
+  opacity: 0.8;
+}
+
+.main-header-logo img:active {
+  opacity: 0.3;
 }
 
 .main-navigation a {
@@ -527,8 +536,99 @@ a {
   text-transform: uppercase;
 }
 
+.filter-item {
+  margin-top: 18px;
+  width: 260px;
+}
+
+.range-filter {
+  margin-top: 44px;
+  margin-bottom: 45px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background-color: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
 .filters fieldset {
   border: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .filters ul {
@@ -736,7 +836,7 @@ a {
   width: 360px;
   margin-top: 30px;
   margin-right: 40px;
-  margin-bottom: 33px;
+  margin-bottom: 0;
 }
 
 .site-mockup {
@@ -837,6 +937,50 @@ a {
 .button-item {
   width: 200px;
   margin-top: 14px;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 14px;
+}
+
+.pagination-item {
+  margin-right: 11px;
+}
+
+.pagination-item a {
+  display: block;
+  padding: 12px 21px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #000000;
+  background-color: #eeeeee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-item-current a {
+  background-color: #ffffff;
+  padding: 9px 18px;
+  border: 3px solid #dbdbdb;
+}
+
+.pagination-item:not(.pagination-item-current):focus a,
+.pagination-item:not(.pagination-item-current):hover a {
+  color: #000000;
+  background-color: #dfdfdf;
+}
+.pagination-item:not(.pagination-item-current):active a {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d5d5d5;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.pagination-item-next a {
+  padding-left: 78px;
+  padding-right: 78px;
 }
 
 .contacts {
@@ -1003,6 +1147,7 @@ a {
 
 .modal {
   display: block;
+  /*  display: none; */
   position: absolute;
   box-sizing: border-box;
 

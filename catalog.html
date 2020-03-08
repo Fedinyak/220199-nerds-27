@@ -45,6 +45,26 @@
             method="get"
             action="https://echo.htmlacademy.ru"
           >
+            <fieldset class="filter-item">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="margin-left: 0; width: 70%;"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price"
+                    >От<input name="min-price" type="number" value="0" />
+                  </label>
+                  <label class="max-price"
+                    >До<input name="max-price" type="number" value="15 000" />
+                  </label>
+                </div>
+              </div>
+            </fieldset>
             <fieldset>
               <legend>Сетка:</legend>
               <ul class="list">
@@ -138,16 +158,26 @@
 
         <section class="catalog">
           <div class="sort-wrap">
-          <p class="sort-title">Сортировать:</p>
-          <ul class="list sort-list">
-            <li class="sort-item"><a class="current-sort">По цене</a></li>
-            <li class="sort-item"><a href="#">По типу</a></li>
-            <li class="sort-item"><a href="#">По названию</a></li>
-            <li class="sort-item"><button class="button-reset button-sort-down current-sort-button" type="button">▼</button></li>
-            <li class="sort-item"><button class="button-reset button-sort-up" type="button">▲</button></li>
+            <p class="sort-title">Сортировать:</p>
+            <ul class="list sort-list">
+              <li class="sort-item"><a class="current-sort">По цене</a></li>
+              <li class="sort-item"><a href="#">По типу</a></li>
+              <li class="sort-item"><a href="#">По названию</a></li>
+              <li class="sort-item">
+                <button
+                  class="button-reset button-sort-down current-sort-button"
+                  type="button"
+                >
+                  ▼
+                </button>
+              </li>
+              <li class="sort-item">
+                <button class="button-reset button-sort-up" type="button">
+                  ▲
+                </button>
+              </li>
+            </ul>
           </div>
-
-          </ul>
           <h2 class="visually-hidden">Каталог шаблонов</h2>
           <ul class="list catalog-list">
             <li class="catalog-item">
@@ -283,6 +313,17 @@
                   </div>
                 </div>
               </article>
+            </li>
+          </ul>
+          <ul class="list pagination-list">
+            <li class="pagination-item pagination-item-prev visually-hidden">
+              <a href="#">Следующая</a>
+            </li>
+            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item pagination-item-next">
+              <a href="#">Следующая</a>
             </li>
           </ul>
         </section>

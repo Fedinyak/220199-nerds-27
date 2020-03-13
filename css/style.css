@@ -19,6 +19,8 @@ body {
   font-weight: 400;
   color: #283136;
 
+  min-width: 1200px;
+
   background-color: #ffffff;
 }
 
@@ -343,7 +345,7 @@ a {
 }
 
 .benefits-text-column {
-  width: 650px;
+  width: 654px;
 }
 
 .benefits-lead {
@@ -496,22 +498,6 @@ a {
 
 .partners-wrap img:hover {
   opacity: 1;
-}
-
-.contacts {
-  line-height: 18px;
-  color: #666666;
-}
-
-.contacts-title {
-  color: #000000;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.catalog-wrap {
-  display: flex;
-  justify-content: space-between;
 }
 
 .main-title {
@@ -825,6 +811,11 @@ a {
   opacity: 1;
 }
 
+.catalog-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -984,44 +975,51 @@ a {
 }
 
 .contacts {
+  padding-top: 40px;
   margin-top: 16px;
+  line-height: 18px;
+  color: #666666;
   position: relative;
+  height: 416px;
+
+  background-image: url("../img/map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contacts-wrap {
   position: relative;
   box-sizing: border-box;
   width: 319px;
-  height: 308px;
+  max-height: 344px;
+
   background-color: #ffffff;
-  top: 74px;
+  top: 34px;
   left: 0;
   z-index: 1;
 
+  padding-top: 31px;
   padding-left: 50px;
-  padding-top: 36px;
+  padding-bottom: 48px;
   padding-right: 49px;
 }
 
-.contacts-wrap::after {
-  content: "";
-  position: absolute;
-
-  top: 35px;
-  left: 680px;
-
-  width: 231px;
-  height: 190px;
-
-  background-image: url("../img/map-marker.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
 .contacts-title {
+  color: #000000;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 29px;
+  margin-bottom: 9px;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  overflow: hidden;
+  max-height: 56px;
+}
+
+.contacts-address {
+  margin-top: 0;
+  overflow: hidden;
+  max-height: 108px;
 }
 
 .contacts a {
@@ -1030,21 +1028,14 @@ a {
 }
 
 .button-contacts {
-  margin-top: 20px;
+  margin-top: 19px;
   padding-left: 45px;
   padding-right: 45px;
 }
 
-.contacts-map {
-  margin-top: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .main-footer-wrap {
   display: flex;
-  margin-top: 185px;
+  margin-top: 37px;
   align-items: center;
   padding-bottom: 20px;
 }
@@ -1147,7 +1138,7 @@ a {
 
 .modal {
   display: block;
-  /*  display: none; */
+  display: none;
   position: absolute;
   box-sizing: border-box;
 

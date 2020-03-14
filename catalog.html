@@ -26,7 +26,7 @@
             <li><a href="studio.html">Студия</a></li>
             <li><a href="clients.html">Клиенты</a></li>
             <li class="site-navigation-current">
-              <a href="catalog.html">Магазин</a>
+              <a class="site-navigation-current-active">Магазин</a>
             </li>
             <li><a href="contacts.html">Контакты</a></li>
           </ul>
@@ -160,21 +160,14 @@
           <div class="sort-wrap">
             <p class="sort-title">Сортировать:</p>
             <ul class="list sort-list">
-              <li class="sort-item"><a class="current-sort">По цене</a></li>
+              <li class="sort-item current-sort-item"><a>По цене</a></li>
               <li class="sort-item"><a href="#">По типу</a></li>
               <li class="sort-item"><a href="#">По названию</a></li>
-              <li class="sort-item">
-                <button
-                  class="button-reset button-sort-down current-sort-button"
-                  type="button"
-                >
-                  ▼
-                </button>
+              <li class="sort-item-btn">
+                <a class="button-sort button-sort-down  current-sort-btn">▼</a>
               </li>
-              <li class="sort-item">
-                <button class="button-reset button-sort-up" type="button">
-                  ▲
-                </button>
+              <li class="sort-item-btn">
+                <a class="button-sort button-sort-up">▲</a>
               </li>
             </ul>
           </div>
@@ -316,31 +309,32 @@
             </li>
           </ul>
           <ul class="list pagination-list">
-            <li class="pagination-item pagination-item-prev visually-hidden">
-              <a href="#">Следующая</a>
+            <li
+              class="pagination-item pagination-item-btn pagination-item-btn-hidden"
+            >
+              <a href="#">Предыдущая</a>
             </li>
             <li class="pagination-item pagination-item-current"><a>1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item pagination-item-next">
+            <li class="pagination-item pagination-item-btn">
               <a href="#">Следующая</a>
             </li>
           </ul>
         </section>
       </div>
-
       <section class="contacts">
         <div class="container">
           <div class="contacts-wrap">
             <h2 class="visually-hidden">Контакты студии</h2>
             <p class="contacts-title">Nёrds design studio</p>
-            <div class="contacts-address">
+            <address class="contacts-address">
               <p>191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</p>
               <p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-            </div>
-            <button class="button button-contacts" type="button">
+            </address>
+            <a class="button button-contacts" href="contac-us.html">
               Напишите нам
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -350,7 +344,7 @@
       <div class="main-footer-wrap container">
         <ul class="list footer-social">
           <li>
-            <a class="social-button social-button-vk"
+            <a href="#" class="social-button social-button-vk"
               ><span class="visually-hidden">Вконтакте</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +360,7 @@
             </a>
           </li>
           <li>
-            <a class="social-button social-button-fb"
+            <a href="#" class="social-button social-button-fb"
               ><span class="visually-hidden">Фейсбук</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -382,7 +376,7 @@
             </a>
           </li>
           <li>
-            <a class="social-button social-button-instagram"
+            <a href="#" class="social-button social-button-instagram"
               ><span class="visually-hidden">Инстаграм</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -452,5 +446,30 @@
         </button>
       </div>
     </section>
+    <script>
+      var link = document.querySelector(".button-contacts");
+
+      var popup = document.querySelector(".modal");
+      var close = popup.querySelector(".modal-close");
+
+      link.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+      });
+
+      close.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+      });
+
+      window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+          }
+        }
+      });
+    </script>
   </body>
 </html>

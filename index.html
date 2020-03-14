@@ -110,6 +110,7 @@
           <ul class="list products-list">
             <li class="products-item">
               <img
+                class="products-item-img"
                 src="img/advantage-picture-red.png"
                 width="300"
                 height="146"
@@ -122,6 +123,7 @@
             </li>
             <li class="products-item">
               <img
+                class="products-item-img"
                 src="img/advantage-picture-green.png"
                 width="300"
                 height="146"
@@ -134,6 +136,7 @@
             </li>
             <li class="products-item">
               <img
+                class="products-item-img"
                 src="img/advantage-picture-yellow.png"
                 width="300"
                 height="146"
@@ -190,48 +193,50 @@
             </dl>
           </div>
           <h3 class="visually-hidden">Наши партнеры</h3>
-          <ul class="list partners-wrap">
-            <li>
-              <a href="https://htmlacademy.ru/intensive/htmlcss">
-                <img
-                  src="img/htmlacdemy-logo.png"
-                  width="196"
-                  height="68"
-                  alt="Сайт HTML Academy"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="img/borodinsli-logo.png"
-                  width="209"
-                  height="90"
-                  alt="Сайт барбершопа"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="img/pink-logo.png"
-                  width="185"
-                  height="52"
-                  alt="Сайт пинк"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="img/mishka-logo.png"
-                  width="173"
-                  height="84"
-                  alt="Сайт Мишки"
-                />
-              </a>
-            </li>
-          </ul>
+          <div class="partners-wrap">
+            <ul class="list partners-list">
+              <li class="partners-item">
+                <a href="https://htmlacademy.ru/intensive/htmlcss">
+                  <img
+                    src="img/htmlacdemy-logo.png"
+                    width="196"
+                    height="68"
+                    alt="Сайт HTML Academy"
+                  />
+                </a>
+              </li>
+              <li class="partners-item">
+                <a href="#">
+                  <img
+                    src="img/borodinsli-logo.png"
+                    width="209"
+                    height="90"
+                    alt="Сайт барбершопа"
+                  />
+                </a>
+              </li>
+              <li class="partners-item">
+                <a href="#">
+                  <img
+                    src="img/pink-logo.png"
+                    width="185"
+                    height="52"
+                    alt="Сайт пинк"
+                  />
+                </a>
+              </li>
+              <li class="partners-item">
+                <a href="#">
+                  <img
+                    src="img/mishka-logo.png"
+                    width="173"
+                    height="84"
+                    alt="Сайт Мишки"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
 
@@ -240,13 +245,13 @@
           <div class="contacts-wrap">
             <h2 class="visually-hidden">Контакты студии</h2>
             <p class="contacts-title">Nёrds design studio</p>
-            <div class="contacts-address">
+            <address class="contacts-address">
               <p>191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</p>
               <p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-            </div>
-            <button class="button button-contacts" type="button">
+            </address>
+            <a class="button button-contacts" href="contac-us.html">
               Напишите нам
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -256,7 +261,7 @@
       <div class="main-footer-wrap container">
         <ul class="list footer-social">
           <li>
-            <a class="social-button social-button-vk"
+            <a href="#" class="social-button social-button-vk"
               ><span class="visually-hidden">Вконтакте</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +277,7 @@
             </a>
           </li>
           <li>
-            <a class="social-button social-button-fb"
+            <a href="#" class="social-button social-button-fb"
               ><span class="visually-hidden">Фейсбук</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +293,7 @@
             </a>
           </li>
           <li>
-            <a class="social-button social-button-instagram"
+            <a href="#" class="social-button social-button-instagram"
               ><span class="visually-hidden">Инстаграм</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -358,5 +363,30 @@
         </button>
       </div>
     </section>
+    <script>
+      var link = document.querySelector(".button-contacts");
+
+      var popup = document.querySelector(".modal");
+      var close = popup.querySelector(".modal-close");
+
+      link.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+      });
+
+      close.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+      });
+
+      window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+          }
+        }
+      });
+    </script>
   </body>
 </html>

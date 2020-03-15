@@ -268,33 +268,33 @@ a {
   cursor: pointer;
 }
 
-#product-1:checked ~ .slider-wrapper {
+.slide-1:checked ~ .slider-wrapper {
   background-image: url("../img/slide-iphone.png");
   background-repeat: no-repeat;
   background-position: 450px 0;
 }
 
-#product-2:checked ~ .slider-wrapper {
+.slide-2:checked ~ .slider-wrapper {
   background-image: url("../img/slide-mac.png");
   background-repeat: no-repeat;
   background-position: 525px 0;
 }
 
-#product-3:checked ~ .slider-wrapper {
+.slide-3:checked ~ .slider-wrapper {
   background-image: url("../img/slide-ipad.png");
   background-repeat: no-repeat;
   background-position: 430px 0px;
 }
 
-#product-1:checked ~ .slider-wrapper #slide1,
-#product-2:checked ~ .slider-wrapper #slide2,
-#product-3:checked ~ .slider-wrapper #slide3 {
+.slide-1:checked ~ .slider-wrapper #slide1,
+.slide-2:checked ~ .slider-wrapper #slide2,
+.slide-3:checked ~ .slider-wrapper #slide3 {
   display: block;
 }
 
-#product-1:checked ~ .slider-wrapper label[for="product-1"],
-#product-2:checked ~ .slider-wrapper label[for="product-2"],
-#product-3:checked ~ .slider-wrapper label[for="product-3"] {
+.slide-1:checked ~ .slider-wrapper label[for="product-1"],
+.slide-2:checked ~ .slider-wrapper label[for="product-2"],
+.slide-3:checked ~ .slider-wrapper label[for="product-3"] {
   position: relative;
   width: 18px;
   height: 18px;
@@ -440,6 +440,12 @@ a {
 }
 
 .benefits-desk dd {
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 0;
+}
+
+.benefits-desk dt {
   color: #000000;
   font-size: 45px;
   font-weight: 700;
@@ -447,50 +453,6 @@ a {
   margin-left: 0;
   margin-bottom: 29px;
 }
-
-.benefits-desk dt {
-  font-size: 16px;
-  line-height: 18px;
-}
-
-/*
-
-.partners-wrap {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  vertical-align: middle;
-  position: relative;
-  flex-wrap: wrap;
-  flex-grow: 1;
-
-  margin-top: 46px;
-  margin-bottom: 44px;
-
-  padding-top: 46px;
-  padding-bottom: 38px;
-
-  border-top: 2px solid #efefef;
-  border-bottom: 2px solid #efefef;
-}
-
-.partners-wrap li {
-  flex-basis: 160px;
-
-  text-align: center;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  vertical-align: middle;
-}
-
-
-.partners-wrap li:not(:last-child) {
-  top: auto;
-  bottom: auto;
-  height: 40px;
-  border-right: 2px solid #efefef;
-}
-*/
 
 .partners-wrap {
   width: 1160px;
@@ -629,6 +591,16 @@ a {
   font-size: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .price-controls label {
   display: inline-block;
   width: 50%;
@@ -704,6 +676,7 @@ a {
 
 .filter-input:disabled + label {
   opacity: 0.1;
+  cursor: default;
 }
 
 .filter-input-radio:checked + label::after {
@@ -1144,48 +1117,6 @@ a {
 .social-button:active path {
   opacity: 0.3;
 }
-
-/* 
-
-На всякий случай оставил удалю когда узнаю как правильно.
-
-.social-button-vk::after {
-  content: "";
-  width: 26px;
-  height: 15px;
-
-  background-image: url("../img/vk-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.social-button-fb::after {
-  content: "";
-  width: 12px;
-  height: 22px;
-
-  background-image: url("../img/fb-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.social-button-instagram::after {
-  content: "";
-  width: 21px;
-  height: 21px;
-
-  background-image: url("../img/insta-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.social-button-vk::after:active,
-.social-button-fb::after:active,
-.social-button-instagram::after:active {
-  opacity: 0.3;
-}
-
-*/
 
 .call-to-action {
   display: block;

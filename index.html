@@ -20,7 +20,7 @@
               src="img/nerds-logo.svg"
               width="160"
               height="65"
-              alt="Логотип дизайн студии «Nëerd's"
+              alt="Главная страница"
             />
           </a>
           <ul class="list site-navigation">
@@ -37,20 +37,20 @@
     <main>
       <section class="slider">
         <input
-          class="visually-hidden"
+          class="visually-hidden slide-1"
           type="radio"
           id="product-1"
           name="toggle"
           checked
         />
         <input
-          class="visually-hidden"
+          class="visually-hidden slide-2"
           type="radio"
           id="product-2"
           name="toggle"
         />
         <input
-          class="visually-hidden"
+          class="visually-hidden slide-3"
           type="radio"
           id="product-3"
           name="toggle"
@@ -59,13 +59,13 @@
           <div class="slider-controls-wrapper">
             <div class="slider-controls">
               <label for="product-1"
-                ><p class="visually-hidden">Первый</p></label
+                ><span class="visually-hidden">Первый</span></label
               >
               <label for="product-2"
-                ><p class="visually-hidden">Второй</p></label
+                ><span class="visually-hidden">Второй</span></label
               >
               <label for="product-3"
-                ><p class="visually-hidden">Третий</p></label
+                ><span class="visually-hidden">Третий</span></label
               >
             </div>
           </div>
@@ -114,6 +114,7 @@
                 src="img/advantage-picture-red.png"
                 width="300"
                 height="146"
+                alt="Веб-сайты"
               />
               <h2 class="products-item-title web">Веб-сайты</h2>
               <p class="products-item-text">
@@ -127,6 +128,7 @@
                 src="img/advantage-picture-green.png"
                 width="300"
                 height="146"
+                alt="Приложения"
               />
               <h2 class="products-item-title">Приложения</h2>
               <p class="products-item-text">
@@ -140,6 +142,7 @@
                 src="img/advantage-picture-yellow.png"
                 width="300"
                 height="146"
+                alt="Презентации"
               />
               <h2 class="products-item-title">Презентации</h2>
               <p class="products-item-text">
@@ -179,16 +182,16 @@
             <p class="benefits-subject">C 2004 года любим точность во всем:</p>
             <dl class="benefits-desk">
               <div class="benefits-desk-wrap">
-                <dd>146<sup>%</sup></dd>
-                <dt>Уровень самоотдачи</dt>
+                <dt>146<sup>%</sup></dt>
+                <dd>Уровень самоотдачи</dd>
               </div>
               <div class="benefits-desk-wrap">
-                <dd>100<sup>%</sup></dd>
-                <dt>Соблюдение сроков</dt>
+                <dt>100<sup>%</sup></dt>
+                <dd>Соблюдение сроков</dd>
               </div>
               <div class="benefits-desk-wrap">
-                <dd>50<sup>%</sup></dd>
-                <dt>Минимальная предоплата</dt>
+                <dt>50<sup>%</sup></dt>
+                <dd>Минимальная предоплата</dd>
               </div>
             </dl>
           </div>
@@ -341,6 +344,7 @@
               name="email"
               placeholder="email@example.com"
               id="appointment-email"
+              required
             />
           </p>
           <p class="appointment-item appointment-item-text">
@@ -351,6 +355,7 @@
               placeholder="В свободной форме"
               id="appointment-mail-text"
               rows="4"
+              required
             ></textarea>
           </p>
           <button class="button button-appointment" type="submit">
@@ -362,30 +367,6 @@
         </button>
       </div>
     </section>
-    <script>
-      var link = document.querySelector(".button-contacts");
-
-      var popup = document.querySelector(".modal");
-      var close = popup.querySelector(".modal-close");
-
-      link.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-      });
-
-      close.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popup.classList.contains("modal-show")) {
-            popup.classList.remove("modal-show");
-          }
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

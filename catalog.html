@@ -19,7 +19,7 @@
               src="img/nerds-logo.svg"
               width="160"
               height="65"
-              alt="Логотип дизайн студии «Nëerd's"
+              alt="На главную страницу"
             />
           </a>
           <ul class="list site-navigation">
@@ -52,14 +52,24 @@
                   <div class="scale">
                     <div class="bar" style="margin-left: 0; width: 70%;"></div>
                   </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
+                  <div class="toggle toggle-min">
+                    <span class="visually-hidden"
+                      >Слайдер минимальной стоимости</span
+                    >
+                  </div>
+                  <div class="toggle toggle-max">
+                    <span class="visually-hidden"
+                      >Слайдер максимальной стоимости</span
+                    >
+                  </div>
                 </div>
                 <div class="price-controls">
                   <label class="min-price"
+                    ><span class="visually-hidden">Минимальная стоимость</span
                     >От<input name="min-price" type="number" value="0" />
                   </label>
                   <label class="max-price"
+                    ><span class="visually-hidden">Максимальная стоимость</span
                     >До<input name="max-price" type="number" value="15000" />
                   </label>
                 </div>
@@ -151,7 +161,9 @@
               </ul>
             </fieldset>
             <button class="button button-filter" type="submit">
-              Показать
+              Показать<span class="visually-hidden"
+                >по примененным фильтрам</span
+              >
             </button>
           </form>
         </section>
@@ -160,14 +172,31 @@
           <div class="sort-wrap">
             <p class="sort-title">Сортировать:</p>
             <ul class="list sort-list">
-              <li class="sort-item current-sort-item"><a>По цене</a></li>
-              <li class="sort-item"><a href="#">По типу</a></li>
-              <li class="sort-item"><a href="#">По названию</a></li>
-              <li class="sort-item-btn">
-                <a class="button-sort button-sort-down  current-sort-btn">▼</a>
+              <li class="sort-item current-sort-item">
+                <a><span class="visually-hidden">Сортировка</span>По цене</a>
+              </li>
+              <li class="sort-item">
+                <a href="#"
+                  ><span class="visually-hidden">Сортировка</span>По типу</a
+                >
+              </li>
+              <li class="sort-item">
+                <a href="#"
+                  ><span class="visually-hidden">Сортировка</span>По названию</a
+                >
               </li>
               <li class="sort-item-btn">
-                <a class="button-sort button-sort-up">▲</a>
+                <a class="button-sort button-sort-down  current-sort-btn"
+                  ><span class="visually-hidden">Упорядочить по убыванию</span
+                  >▼</a
+                >
+              </li>
+              <li class="sort-item-btn">
+                <a class="button-sort button-sort-up"
+                  ><span class="visually-hidden"
+                    >Упорядочить по возрастанию</span
+                  >▲</a
+                >
               </li>
             </ul>
           </div>
@@ -312,13 +341,27 @@
             <li
               class="pagination-item pagination-item-btn pagination-item-btn-hidden"
             >
-              <a href="#">Предыдущая</a>
+              <a href="#"
+                >Предыдущая<span class="visually-hidden">страница</span></a
+              >
             </li>
-            <li class="pagination-item pagination-item-current"><a>1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item pagination-item-current">
+              <a><span class="visually-hidden">Показать странницу</span>1</a>
+            </li>
+            <li class="pagination-item">
+              <a href="#"
+                ><span class="visually-hidden">Показать странницу</span>2</a
+              >
+            </li>
+            <li class="pagination-item">
+              <a href="#"
+                ><span class="visually-hidden">Показать странницу</span>3</a
+              >
+            </li>
             <li class="pagination-item pagination-item-btn">
-              <a href="#">Следующая</a>
+              <a href="#"
+                >Следующая<span class="visually-hidden">страница</span></a
+              >
             </li>
           </ul>
         </section>
@@ -424,6 +467,7 @@
               name="email"
               placeholder="email@example.com"
               id="appointment-email"
+              required
             />
           </p>
           <p class="appointment-item appointment-item-text">
@@ -434,6 +478,7 @@
               placeholder="В свободной форме"
               id="appointment-mail-text"
               rows="4"
+              required
             ></textarea>
           </p>
           <button class="button button-appointment" type="submit">
@@ -445,30 +490,6 @@
         </button>
       </div>
     </section>
-    <script>
-      var link = document.querySelector(".button-contacts");
-
-      var popup = document.querySelector(".modal");
-      var close = popup.querySelector(".modal-close");
-
-      link.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-      });
-
-      close.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (popup.classList.contains("modal-show")) {
-            popup.classList.remove("modal-show");
-          }
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

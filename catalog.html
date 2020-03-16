@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/min-style.css" />
   </head>
   <body>
     <header class="main-header">
@@ -206,7 +206,12 @@
               <article>
                 <div class="site-mockup">
                   <div class="site-mockup-btns"></div>
-                  <img src="img/img-sedona.jpg" width="360" alt="Сайт Sedona" />
+                  <img
+                    src="img/img-sedona.jpg"
+                    width="360"
+                    height="576"
+                    alt="Сайт Sedona"
+                  />
                   <div class="catalog-item-container">
                     <a href="sedona.html">
                       <h2 class="catalog-item-title">Sedona</h2>
@@ -225,7 +230,12 @@
               <article>
                 <div class="site-mockup">
                   <div class="site-mockup-btns"></div>
-                  <img src="img/img-pink.jpg" width="360" height="576" alt="" />
+                  <img
+                    src="img/img-pink.jpg"
+                    width="360"
+                    height="576"
+                    alt="Приложение Pink App"
+                  />
                   <div class="catalog-item-container">
                     <a href="pink-App.html">
                       <h2 class="catalog-item-title">Приложение Pink App</h2>
@@ -337,33 +347,31 @@
               </article>
             </li>
           </ul>
-          <ul class="list pagination-list">
-            <li
+          <div class="pagination-wrap">
+            <a
               class="pagination-item pagination-item-btn pagination-item-btn-hidden"
+              href="#"
+              >Предыдущая<span class="visually-hidden">страница</span></a
             >
-              <a href="#"
-                >Предыдущая<span class="visually-hidden">страница</span></a
-              >
-            </li>
-            <li class="pagination-item pagination-item-current">
-              <a><span class="visually-hidden">Показать странницу</span>1</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#"
-                ><span class="visually-hidden">Показать странницу</span>2</a
-              >
-            </li>
-            <li class="pagination-item">
-              <a href="#"
-                ><span class="visually-hidden">Показать странницу</span>3</a
-              >
-            </li>
-            <li class="pagination-item pagination-item-btn">
-              <a href="#"
-                >Следующая<span class="visually-hidden">страница</span></a
-              >
-            </li>
-          </ul>
+            <ul class="list pagination-list">
+              <li class="pagination-item pagination-item-current">
+                <a><span class="visually-hidden">Показать странницу</span>1</a>
+              </li>
+              <li class="pagination-item">
+                <a href="#"
+                  ><span class="visually-hidden">Показать странницу</span>2</a
+                >
+              </li>
+              <li class="pagination-item">
+                <a href="#"
+                  ><span class="visually-hidden">Показать странницу</span>3</a
+                >
+              </li>
+            </ul>
+            <a class="pagination-item pagination-item-btn" href="#"
+              >Следующая<span class="visually-hidden">страница</span></a
+            >
+          </div>
         </section>
       </div>
       <section class="contacts">
@@ -490,6 +498,6 @@
         </button>
       </div>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/min-script.js"></script>
   </body>
 </html>

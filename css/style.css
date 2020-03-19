@@ -821,6 +821,11 @@ input[type="number"] {
   opacity: 0.2;
   font-size: 14px;
   margin-right: 0;
+  line-height: 5px;
+}
+
+.button-sort:focus {
+  outline: auto;
 }
 
 .button-sort-down {
@@ -917,16 +922,18 @@ input[type="number"] {
   background-color: #eeeeee;
   text-align: center;
   width: 360px;
-
   bottom: 0;
   padding-left: 50px;
   padding-right: 50px;
 }
 
+.catalog-item:focus .catalog-item-container,
+.catalog-item:focus-within .catalog-item-container,
 .catalog-item:hover .catalog-item-container {
   z-index: 1;
 }
 
+.catalog-item:focus .site-mockup,
 .catalog-item:hover .site-mockup {
   background-color: #4d4d4d;
   box-shadow: 0px 6px 15px 0 rgba(0, 1, 1, 0.25);
